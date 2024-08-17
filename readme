@@ -1,0 +1,38 @@
+Quick Guide: Setting Up Your Python Environment on Windows
+Here's how to set up a Python environment for your CSV Chat tool on a Windows system.
+
+Step 1: Create a Virtual Environment
+1. Open Command Prompt:
+Press Win + R, type cmd, and hit Enter.
+
+2. Navigate to your project directory:
+Move to your desired directory, for example, D:\Gen_AI\Project1
+cd D:\Gen_AI\Project1
+
+3. Create the virtual environment:
+Run the following command to create a virtual environment named venv.
+python -m venv venv
+
+4.Activate the virtual environment:
+Activate the virtual environment using the following command:
+venv\Scripts\activate
+You’ll notice the prompt changes to show (venv).
+
+
+Step 2: Install Dependencies
+
+1. Create a requirements.txt file:
+In your project directory, create a requirements.txt file with the following content:
+streamlit
+streamlit_chat
+langchain
+langchain_experimental
+langchain_google_genai
+python-dotenv
+
+2. Install the required packages:
+pip install -r requirements.txt
+
+Step 3: Run Your Streamlit App
+Now that everything is set up, you can run your Streamlit app:
+streamlit run app.py
