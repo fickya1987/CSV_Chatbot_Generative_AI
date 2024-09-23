@@ -18,7 +18,7 @@ if google_api_key is None:
 st.title("📈Chat With Your CSV File🚀")
 uploaded_file = st.file_uploader("Upload your CSV file", type = "csv")
 
-gemini_llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=google_api_key, temperature=0.01)
+gemini_llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-001", google_api_key=google_api_key, temperature=0.9)
 
 if uploaded_file is not None:
     agent = create_csv_agent(gemini_llm, uploaded_file, verbose=True, allow_dangerous_code=True)
